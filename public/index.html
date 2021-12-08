@@ -4,48 +4,67 @@
     <meta charset="UTF-8">
     <title>Inventory Web View</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/png" sizes="16x16"  href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
 <body>
-    <div class="container vertical">
-        <div class="container buttons">
-            <button id="getAllItems-button">Update getAllItems</button>
-        </div>
-        <div id="main-container" class="container"></div>
+<div class="container vertical">
+    <div class="container buttons">
+        <button id="getAllItems-button">Update getAllItems</button>
     </div>
-
-    <template id="item-template">
-        <div class="item">
-            <div class="field">
-                <span class="productName"></span>
-                -
-                $<span class="sellPrice"></span>
-            </div>
-            <div class="field">
-                <span class="id"></span>
-                |
-                <span class="sellCapacity"></span>
-                <span class="unit"></span>
-            </div>
-            <div class="field">
-                Stock:
-                <span class="stock"></span>
-                /
-                <span class="capacity"></span>
-                <span class="unit"></span>
-            </div>
-            <button>
-                Buy Stock
-                <div class="field">
-                    <span class="purchaseCapacity"></span>
-                    <span class="unit"></span>
-                    -
-                    $<span class="purchasePrice"></span>
-                </div>
-            </button>
+    <div id="main-container" class="container"></div>
+    <form id="item-form" class="container vertical">
+        <div class="container vertical">
+            <label><span>id</span><input name='id' id="item-form-id"></label>
+            <label><span>productName</span><input name='productName' id="item-form-productName"></label>
+            <label><span>stock</span><input name='stock' type="number" id="item-form-stock"></label>
+            <label><span>unit</span><input name='unit' id="item-form-unit"></label>
+            <label><span>capacity</span><input name='capacity' type="number" id="item-form-capacity"></label>
+            <label><span>sellPrice</span><input name='sellPrice' type="number" id="item-form-sellPrice"></label>
+            <label><span>sellCapacity</span><input name='sellCapacity' type="number" id="item-form-sellCapacity"></label>
+            <label><span>purchasePrice</span><input name='purchasePrice' type="number" id="item-form-purchasePrice"></label>
+            <label><span>purchaseCapacity</span><input name='purchaseCapacity' type="number" id="item-form-purchaseCapacity"></label>
         </div>
-    </template>
+        <div class="container buttons">
+            <a class="button" id="get-form-button">GET</a>
+            <a class="button" id="update-form-button">UPDATE</a>
+            <a class="button" id="register-form-button">REGISTER</a>
+            <a class="button" id="delete-form-button">DELETE</a>
+        </div>
+    </form>
+</div>
 
-    <script src="index.js"></script>
+<template id="item-template">
+    <div class="item">
+        <div class="field">
+            <span class="productName"></span>
+            -
+            $<span class="sellPrice"></span>
+        </div>
+        <div class="field">
+            <input class="id" readonly="readonly"/>
+            |
+            <span class="sellCapacity"></span>
+            <span class="unit"></span>
+        </div>
+        <div class="field">
+            Stock:
+            <span class="stock"></span>
+            /
+            <span class="capacity"></span>
+            <span class="unit"></span>
+        </div>
+        <button>
+            Buy Stock
+            <div class="field">
+                <span class="purchaseCapacity"></span>
+                <span class="unit"></span>
+                -
+                $<span class="purchasePrice"></span>
+            </div>
+        </button>
+    </div>
+</template>
+
+<script src="index.js"></script>
 </body>
 </html>
