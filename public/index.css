@@ -1,0 +1,26 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    background-color: aquamarine;
+}

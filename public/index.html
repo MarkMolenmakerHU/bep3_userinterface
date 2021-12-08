@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Web View</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" sizes="16x16"  href="favicon-16x16.png">
+</head>
+<body>
+    <div class="container vertical">
+        <div class="container buttons">
+            <button id="getAllItems-button">Update getAllItems</button>
+        </div>
+        <div id="main-container" class="container"></div>
+    </div>
+
+    <template id="item-template">
+        <div class="item">
+            <div class="field">
+                <span class="productName"></span>
+                -
+                $<span class="sellPrice"></span>
+            </div>
+            <div class="field">
+                <span class="id"></span>
+                |
+                <span class="sellCapacity"></span>
+                <span class="unit"></span>
+            </div>
+            <div class="field">
+                Stock:
+                <span class="stock"></span>
+                /
+                <span class="capacity"></span>
+                <span class="unit"></span>
+            </div>
+            <button>
+                Buy Stock
+                <div class="field">
+                    <span class="purchaseCapacity"></span>
+                    <span class="unit"></span>
+                    -
+                    $<span class="purchasePrice"></span>
+                </div>
+            </button>
+        </div>
+    </template>
+
+    <script src="index.js"></script>
+</body>
+</html>
